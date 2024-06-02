@@ -1,12 +1,13 @@
 <template>
-  <h1>DashBorard Page</h1>
-  <p>{{ getUserDetails }}</p>
+  <campaign-details></campaign-details>
 </template>
 <script>
 import { mapActions, mapMutations, mapGetters } from "vuex";
+import CampaignDetails from "../components/CampaignDetails.vue";
+
 export default {
-  data() {
-    return {};
+  components: {
+    CampaignDetails,
   },
   computed: {
     ...mapGetters("auth", ["getUserDetails"]),

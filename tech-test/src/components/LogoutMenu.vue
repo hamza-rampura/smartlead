@@ -2,9 +2,8 @@
   <q-menu transition-show="jump-down" transition-hide="jump-up">
     <q-list style="min-width: 100px">
       <q-item>
-        <q-item-section></q-item-section>
+        <q-item-section>{{ userName }}</q-item-section>
       </q-item>
-      <q-separator />
       <q-item clickable @click="handleLogout">
         <q-item-section>Logout</q-item-section>
       </q-item>
@@ -18,7 +17,7 @@ import { mapGetters, mapActions } from "vuex";
 export default defineComponent({
   computed: {
     ...mapGetters("auth", ["getUserDetails"]),
-    isUserLoggedIn() {
+    userName() {
       return this.getUserDetails;
     },
   },

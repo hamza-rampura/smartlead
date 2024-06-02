@@ -58,27 +58,10 @@
 </template>
 <script>
 import { mapActions, mapMutations } from "vuex";
+import { users } from "../data/constant.js";
 export default {
   data() {
     return {
-      users: [
-        {
-          email: "admin@smartlead.ai",
-          password: 123456,
-        },
-        {
-          email: "user@smartlead.ai",
-          password: 654321,
-        },
-        {
-          email: "hamza@smartlead.ai",
-          password: 515253,
-        },
-        {
-          email: "dinesh@smartlead.ai",
-          password: 887766,
-        },
-      ],
       email: "",
       password: "",
       isPwd: true,
@@ -91,15 +74,13 @@ export default {
       return !(this.email && this.password);
     },
   },
-  created() {
-    console.log(this.$router);
-  },
+  created() {},
   methods: {
     ...mapActions("auth", ["setUserDetailsFn"]),
     onSubmit() {
       this.loading = true;
       setTimeout(() => {
-        for (let user of this.users) {
+        for (let user of users) {
           if (user.email == this.email && user.password == this.password) {
             this.errorMessage = null;
             this.loading = false;
@@ -110,7 +91,7 @@ export default {
         }
         this.errorMessage = "Incorrect email id or password.";
         this.loading = false;
-      }, 2000);
+      }, 0);
     },
   },
 };
@@ -119,8 +100,9 @@ export default {
 .login-card {
   width: 545px;
   padding: 50px 60px;
-  max-height: 424px;
-  margin-top: 64px;
+  height: 100%;
+  max-height: 454px;
+  margin-top: 74px;
   .heading {
     font-size: 24px;
     font-weight: 600;

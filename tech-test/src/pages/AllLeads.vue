@@ -1,6 +1,5 @@
 <template>
-  <h1>All Leads Page</h1>
-  <p>{{ getUserDetails }}</p>
+  <h3>All Leads Page</h3>
 </template>
 <script>
 import { mapActions, mapMutations, mapGetters } from "vuex";

@@ -1,6 +1,11 @@
 <template>
   <div class="q-py-sm">
-    <q-item clickable :to="link.to" class="nav-links q-py-sm flex-center">
+    <q-item
+      clickable
+      :href="link.to"
+      target="_blank"
+      class="nav-links q-py-sm flex-center"
+    >
       <q-item-section v-if="link.icon" class="link-icon">
         <img :src="link.icon" />
       </q-item-section>
@@ -16,7 +21,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "NavLinks",
+  name: "DrawerFooter",
   props: {
     link: {
       type: Object,
