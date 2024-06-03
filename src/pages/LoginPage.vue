@@ -91,7 +91,7 @@ export default {
         }
         this.errorMessage = "Incorrect email id or password.";
         this.loading = false;
-      }, 0);
+      }, 1000);
     },
   },
 };

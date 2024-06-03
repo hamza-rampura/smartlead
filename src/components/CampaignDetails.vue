@@ -306,6 +306,46 @@ export default {
             },
           ],
         },
+        {
+          selected: false,
+          name: "Extra Campaign",
+          status: "Sent",
+          lastUpdateDate: "13 Apr 2023",
+          sequenceCount: 5,
+          progress: 65,
+          metrics: [
+            {
+              label: "Sent",
+              count: 800,
+              percent: null,
+              isError: false,
+            },
+            {
+              label: "Opened",
+              count: 650,
+              percent: 12,
+              isError: false,
+            },
+            {
+              label: "Clicked",
+              count: 100,
+              percent: 12,
+              isError: false,
+            },
+            {
+              label: "Replied",
+              count: 75,
+              percent: 12,
+              isError: false,
+            },
+            {
+              label: "Positive Reply",
+              count: 32,
+              percent: 12,
+              isError: false,
+            },
+          ],
+        },
       ],
     };
   },
