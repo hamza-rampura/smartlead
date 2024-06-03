@@ -88,3 +88,14 @@ export const campaigns = [
     ],
   },
 ];
+
+export const columns = [
+  {
+    name: "details",
+    align: "left",
+    label: "Campaign Details",
+    field: "details",
+  },
+  { name: "report", align: "left", label: "Reports", field: "sent" },
+  { name: "actions", align: "left", label: "", field: "actions" },
+];

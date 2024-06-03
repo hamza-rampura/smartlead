@@ -3,7 +3,7 @@
     class="col q-pr-lg"
     :class="{ 'custom-max-width': metric.label == 'Sent' }"
   >
-    <div class="row items-baseline">
+    <div class="row items-baseline no-wrap">
       <div :style="metricColor" class="metric-count">{{ metric.count }}</div>
       <div
         v-if="metric.percent != null"
@@ -12,7 +12,7 @@
         {{ metric.percent.toFixed(1) }}%
       </div>
     </div>
-    <div class="row items-center q-mt-sm light-grey-text font-size-14">
+    <div class="row items-center q-mt-sm light-grey-text font-size-14 no-wrap">
       <p>{{ metric.label }}</p>
       <q-icon
         v-if="metric?.isError"

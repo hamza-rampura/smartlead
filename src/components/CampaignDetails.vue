@@ -128,6 +128,7 @@
 
 <script>
 import MetricComponent from "./MetricComponent.vue";
+import { columns } from "../data/constant.js";
 export default {
   components: {
     MetricComponent,
@@ -143,6 +144,7 @@ export default {
       searchQuery: "",
       allSelected: false,
       selected: [],
+      columns: columns, // table columns
       campaigns: [
         {
           selected: false,
@@ -304,16 +306,6 @@ export default {
             },
           ],
         },
-      ],
-      columns: [
-        {
-          name: "details",
-          align: "left",
-          label: "Campaign Details",
-          field: "details",
-        },
-        { name: "report", align: "left", label: "Reports", field: "sent" },
-        { name: "actions", align: "left", label: "", field: "actions" },
       ],
     };
   },
